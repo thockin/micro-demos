@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: demos
+  name: my-app-config
+data:
+  cfg-version: "93"
+  min-power: "1"
+  max-power: "100"
+  objective: "world domination"
