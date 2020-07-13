@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msg
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msg
+  template:
+    metadata:
+      labels:
+        app: msg
+    spec:
+      containers:
+      - name: serve-msg
+        image: thockin/serve-msg
+        args: [ "hello from cluster 1" ]
