@@ -21,7 +21,7 @@ readonly timeout=$(if [ "$(uname)" == "Darwin" ]; then echo "1"; else echo "0.1"
 
 function desc() {
     maybe_first_prompt
-    echo "$blue# $@$reset"
+    echo -e "$blue# $@$reset"
     prompt
 }
 
