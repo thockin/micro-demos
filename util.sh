@@ -31,6 +31,9 @@ function desc_type() {
     if [ -n "$DEMO_RUN_FAST" ]; then
       rate=1000
     fi
+    if [ -n "$DEMO_RUN_SPEED" ]; then
+      rate=$DEMO_RUN_SPEED
+    fi
     echo -e "$blue# $@$reset" | pv -qL $rate
 
     prompt
@@ -57,6 +60,9 @@ function run() {
     rate=25
     if [ -n "$DEMO_RUN_FAST" ]; then
       rate=1000
+    fi
+    if [ -n "$DEMO_RUN_SPEED" ]; then
+      rate=$DEMO_RUN_SPEED
     fi
     echo "$green$1$reset" | pv -qL $rate
     if [ -n "$DEMO_RUN_FAST" ]; then
