@@ -59,7 +59,7 @@ function run() {
     if [ -z "$DEMO_AUTO_RUN" ]; then
       read -s
     fi
-    DEMO_RUN_STDOUT="$(tail -n +2 $OFILE | sed 's/\r//g')"
+    DEMO_RUN_STDOUT="$(tail -n +2 $OFILE | head -n -2 | sed 's/\r//g')"
     rm $OFILE
     return $r
 }
