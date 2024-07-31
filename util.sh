@@ -51,7 +51,7 @@ function run() {
     if [ -n "$DEMO_RUN_FAST" ]; then
       sleep 0.5
     fi
-    OFILE="$(mktemp -t $(basename $0).XXXXXX)"
+    OFILE="$(mktemp)"
     script -eq -c "$1" -f "$OFILE"
     r=$?
     read -d '' -t "${timeout}" -n 10000 # clear stdin
