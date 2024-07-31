@@ -60,6 +60,7 @@ function run() {
       read -s
     fi
     DEMO_RUN_STDOUT="$(tail -n +2 $OFILE | sed 's/\r//g')"
+    rm $OFILE
     return $r
 }
 
