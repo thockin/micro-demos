@@ -3,10 +3,6 @@
 . $(dirname ${BASH_SOURCE})/udemo.sh
 . $(dirname ${BASH_SOURCE})/vars.sh
 
-PRJ=thockin-dev-2
-CTX1="demo1"
-CTX2="demo2"
-
 GCLOUD="gcloud --project=$PRJ"
 K1="kubectl --context=$CTX1"
 K2="kubectl --context=$CTX2"
